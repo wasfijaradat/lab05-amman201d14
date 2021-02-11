@@ -81,13 +81,21 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
   
+  let num1 =  sumArr[0];
+  let num2 = sumArr[1];
+  let num3 = sumArr[2];
+
+  let twoNumsSum = sum(num1, num2)[0];
+  let finalSum = sum(twoNumsSum, num3)[0];
+
+  return[ finalSum,`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${finalSum} is their sum.`];
  
   //eslint-disable-line
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
